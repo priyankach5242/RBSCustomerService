@@ -12,7 +12,7 @@ namespace CustomerServices.Helpers
         public HttpClient AccountDetails()
         {
             var client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:44338");
+            client.BaseAddress = new Uri("http://20.62.136.183/");
             return client;
         }
 
