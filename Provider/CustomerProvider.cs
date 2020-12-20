@@ -26,7 +26,7 @@ namespace CustomerServices.Provider
                 {
                     _log4net.Info("Customer Id created");
                     var client = new HttpClient();
-                    client.BaseAddress = new Uri("https://localhost:44338");
+                    client.BaseAddress = new Uri("http://20.62.136.183/");
                     HttpResponseMessage rep = client.PostAsJsonAsync("api/Account/createAccount", new { CustomerId = Convert.ToInt32(Model.CustomerId) }).Result;
                     if (rep.StatusCode == System.Net.HttpStatusCode.InternalServerError)
                     {
